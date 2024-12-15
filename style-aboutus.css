@@ -1,0 +1,432 @@
+@font-face {
+    font-family: font;
+    src: url(font.ttf);
+}
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #382824; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+    animation: fadeOut 3s ease forwards;
+    animation-delay: 3s; 
+}
+
+.loading-logo {
+    text-align: center;
+    font-size: 1.5rem;
+    color: bisque;
+    animation: bounce 1.5s infinite;
+}
+
+.loading-logo img {
+    width: 100px;
+    height: 100px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.cursor {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #382824;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+    z-index: 99999;
+}
+.cursor2 {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #382824;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .18s;
+    z-index: 99999;
+}
+body {
+    font-family: font;
+    cursor: url('gambar/cursor.cur'), auto;
+}
+
+body::-webkit-scrollbar {
+    width: 20px;
+    background-color: #382824;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #9D6855; 
+    border-radius: 10px; 
+    border: 5px solid #382824;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: bisque; 
+    border-radius: 10px;
+    border: 5px solid #382824;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+
+header {
+    background-color: #9D6855;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 50px rgba(82, 53, 37, 0.85);
+}
+
+.navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.navbar .nav-link:hover {
+    text-decoration: underline white;
+    color: bisque;
+    cursor: url('gambar/cursor-clickk.cur'), pointer;
+}
+
+.navbar .navbar-collapse {
+    background-color: #9D6855;
+}
+.custom-dropdown-bg {
+    background-color: #382824 !important; 
+}
+.logo-icon {
+    height: 2.5rem;
+    width: auto;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: url('gambar/cursor-clickk.cur'), pointer;
+}
+
+.navbar-toggler:hover {
+    cursor: url('gambar/cursor-clickk.cur'), pointer;
+}
+
+.float-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000;
+    display: none; 
+    background-color: #c28d52; 
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 18px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    scale: 1 / 1;
+}
+
+.float-btn img {
+    height: 40px;
+    width: auto;
+    scale: 1 / 1;
+}
+
+.float-btn:hover {
+    background-color: #9D6855; 
+    cursor: url('gambar/cursor-clickk.cur'), pointer;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-us {
+    background-color: #9D6855;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 30px 15px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+}
+
+.paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.visi-misi {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.visi, .misi {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.misi p {
+    text-align: right;
+    padding-right: 20px;
+    margin-left: 30px;
+}
+.visi p {
+    text-align: left;
+}
+.misi h2 {
+    text-align: right;
+    padding-right: 20px;
+    margin-left: 30px;
+}
+.visi h2 {
+    text-align: left;
+}
+.visi-gambar, .misi-gambar {
+    max-width: 400px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+.visi-keterangan, .misi-keterangan {
+    flex: 1;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+footer {
+    background-color: #382824;
+    color: bisque;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 50px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid bisque;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: bisque;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: bisque;
+    text-decoration: underline;
+    cursor: url('gambar/cursor-clickk.cur'), pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0f0c0b;
+    color: bisque;
+    margin-top: 20px;
+    border-top: 1px solid bisque;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+@media (max-width: 1440px) {
+    .navbar .nav-link:hover {
+        transform: scale(1.05);
+    }
+    .navbar .navbar-collapse {
+        position: relative;
+    }
+    .footer-section iframe {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .navbar .nav-link:hover {
+        transform: scale(1.01);
+        width: 99.5%;
+    }
+    .navbar .nav-link {
+        padding: 20px;
+        width: 99.5%;
+    }
+    .navbar .navbar-collapse {
+        background-color: #4e352f;
+        position: absolute;
+        width: 100%;
+        top: 100%; 
+        left: 0; 
+        z-index: 1050;
+        border-bottom-right-radius: 17px;
+        border-bottom-left-radius: 17px;
+    }
+    .navbar .navbar-collapse .nav-link:hover {
+        background-color: #382824;
+        border-bottom-right-radius: 17px;
+        border-bottom-left-radius: 17px;
+    }
+    .footer-section iframe {
+        width: 80%;
+    }
+}
+
+@media (max-width: 770px) {
+    .navbar-toggler {
+        margin-right: 15px;
+        cursor: url('gambar/cursor-clickk.cur'), pointer;
+    }
+    .visi, .misi {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+    .visi-gambar, .misi-gambar {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    .misi {
+        flex-direction: column-reverse;
+    }
+    .visi p {
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        max-width: 90%;
+    }
+    .misi p {
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        max-width: 90%;
+    }
+    .visi h2 {
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        max-width: 90%;
+    }
+    .misi h2 {
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        max-width: 90%;
+    }
+    .footer-section h3 {
+        font-size: 1rem;
+    }
+    .footer-section p {
+        font-size: 0.8rem;
+    }
+    .footer-section iframe {
+        width: 75%;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .footer-section {
+        width: 70%;
+        text-align: center;
+    }
+}
+@media (max-width: 420px) {
+    
+}

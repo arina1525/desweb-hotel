@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rina Hotel-About Us</title>
+    <link rel="icon" href="gambar/logo.png" sizes="40x40">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style-aboutus.css"><script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        window.onscroll = function() {
+            let backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-logo">
+            <img src="gambar/logo.png" alt="Logo" class="logo">
+            <p>Loading...</p>
+        </div>
+    </div>
+    <button id="backToTop" class="float-btn" onclick="scrollToTop()"><img src="gambar/arrow up.png"></button>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark sticky">
+            <a class="navbar-brand" href="index.html">
+                <img src="gambar/logo.png" alt="Logo" class="logo-icon">
+                The Rina Hotel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hot-offers.html">Hot Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="about-us fade-in" id="about-us">
+            <h1>About Us</h1>
+            <div class="logo">
+                <img src="gambar/logo.png" alt="The Rina Logo">
+            </div>
+            <div class="paragraph">
+                <p>Welcome to The Rina, a premier 5-star hotel where elegance meets comfort. Nestled in the heart of the city, The Rina offers a perfect blend of luxury, sophistication, and personalized service, ensuring every guest feels at home while experiencing the finest hospitality. From beautifully designed rooms to world-class dining and wellness facilities, we take pride in creating unforgettable moments for leisure and business travelers alike. Whether you're seeking relaxation, adventure, or productivity, The Rina is your ultimate destination for a refined and enriching stay.</p>
+            </div>
+        </section>
+        <section class="visi-misi">
+            <div class="visi fade-in">
+                <img src="gambar/hero1.jpg" alt="Gambar Visi" class="visi-gambar">
+                <div class="visi-keterangan">
+                    <h2>Vision</h2>
+                    <p>To be a globally recognized hotel that redefines luxury hospitality, inspiring guests through exceptional service, timeless elegance, and innovative experiences.</p>
+                </div>
+            </div>
+            <div class="misi fade-in">
+                <div class="misi-keterangan">
+                    <h2>Mission</h2>
+                    <p>Our mission is to deliver impeccable service and unforgettable moments through a blend of warmth, professionalism, and innovation. We strive to exceed expectations by offering meticulously designed spaces, exquisite culinary offerings, and personalized experiences that reflect the unique spirit of The Rina. Guided by our core values of excellence, sustainability, and care, we aim to set the benchmark for luxury hospitality.</p>
+                </div>
+                <img src="gambar/hero2.jpg" alt="Gambar Misi" class="misi-gambar">
+            </div>
+        </section>
+    </div>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>Jl. gaktauapa, kota yaudah selatan, Jawa tenggara, bumi 54321 <br>Telepon 0111-97979797 <br>WA (+999) 987 3456 210 <br><br>heheheh@mail.xyz</p>
+            </div>
+            <div class="footer-section">
+                <h3>Location Map</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.226930441767!2d110.8484629151961!3d-7.558258776739235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a14f4d5b5cb8b%3A0xf7c4e678495e445!2sUniversitas%20Sebelas%20Maret!5e0!3m2!1sen!2sid!4v1698070620517!5m2!1sen!2sid" 
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="social-media">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2024 Arina Al Haq</p>
+        </div>
+    </footer> 
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove",function(e){
+            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        });
+        const sections = document.querySelectorAll('.fade-in');
+
+        const options = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: "0px"
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

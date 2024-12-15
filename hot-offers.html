@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rina Hotel-Hot Offers</title>
+    <link rel="icon" href="gambar/logo.png" sizes="40x40">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style-hotoffers.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        window.onscroll = function() {
+            let backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-logo">
+            <img src="gambar/logo.png" alt="Logo" class="logo">
+            <p>Loading...</p>
+        </div>
+    </div>
+    <button id="backToTop" class="float-btn" onclick="scrollToTop()"><img src="gambar/arrow up.png"></button>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark sticky">
+            <a class="navbar-brand" href="index.html">
+                <img src="gambar/logo.png" alt="Logo" class="logo-icon">
+                The Rina Hotel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hot-offers.html">Hot Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="hot-offers">
+        <h2>Our Hot Offers</h2>
+        <div class="offers-container">
+            <div class="offer-box">
+                <h3>Winter Package</h3>
+                <img src="gambar/offers winter.jpg">
+                <button class="details-btn" onclick="showPopup('popup1')">More Details</button>
+            </div>
+            <div class="offer-box">
+                <h3>New Year Package</h3>
+                <img src="gambar/offers new year.jpg">
+                <button class="details-btn" onclick="showPopup('popup2')">More Details</button>
+            </div>
+            <div class="offer-box">
+                <h3>Family Package</h3>
+                <img src="gambar/offers family.jpg">
+                <button class="details-btn" onclick="showPopup('popup3')">More Details</button>
+            </div>
+            <div class="offer-box">
+                <h3>Bussiness Package</h3>
+                <img src="gambar/offers bussiness.jpg">
+                <button class="details-btn" onclick="showPopup('popup4')">More Details</button>
+            </div>
+            <div class="offer-box">
+                <h3>Anniversary Sale</h3>
+                <img src="gambar/offers anniv.jpg">
+                <button class="details-btn" onclick="showPopup('popup5')">More Details</button>
+            </div>
+        </div>
+    </section>
+    <section class="form-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2 class="text-center">CHECK IN NOW</h2>
+                    <form id="myForm">
+                        <div class="form-group">
+                            <label for="room-type">CHOOSE ROOMS</label>
+                            <select class="form-control" id="room-type">
+                                <option>CHOOSE ROOM</option>
+                                <option>DELUXE</option>
+                                <option>SUPERIOR</option>
+                                <option>FAMILY</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-in-date">CHECK IN DATE</label>
+                            <input type="date" class="form-control" id="check-in-date">
+                        </div>
+                        <button type="button" id="resetButton" class="button-book">BOOK NOW</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup1')"><img src="gambar/exit.png"></span>
+            <br>
+            <h3>IDR 1.100.000,- net</h3>
+            <h4>What’s Included :</h4>
+            <ul>
+                <li>2-night stay in a room with additional heating amenities.</li>
+                <li>Complimentary hot chocolate and cookies every evening.</li>
+                <li>Access to the hotel’s sauna and spa.</li>
+                <li>30% discount on local winter activities (if available, such as skiing or skating).</li>
+                <li>Exclusive winter souvenir from the hotel.</li>
+            </ul>
+            <h4>Terms and Conditions :</h4>
+            <ul>
+                <li>Valid during the winter season (usually December–February).</li>
+                <li>Minimum stay of 2 nights required.</li>
+                <li>Non-refundable and non-modifiable booking.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="popup2" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup2')"><img src="gambar/exit.png"></span>
+            <br>
+            <h3>IDR 1.000.000,- net</h3>
+            <h4>What’s Included :</h4>
+            <ul>
+                <li>1-night stay in a deluxe room with city or beach views.</li>
+                <li>Gala dinner tickets for 2, including live music and a fireworks show.</li>
+                <li>Special welcome drink and New Year gift package.</li>
+                <li>New Year brunch at the hotel’s restaurant.</li>
+                <li>Early check-in and late check-out subject to availability.</li>
+            </ul>
+            <h4>Terms and Conditions :</h4>
+            <ul>
+                <li>Valid for check-in on December 31 only.</li>
+                <li>Booking and full payment required before December 20.</li>
+                <li>Non-cancellable and non-changeable reservation.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="popup3" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup3')"><img src="gambar/exit.png"></span>
+            <br>
+            <h3>IDR 1.800.000,- net</h3>
+            <h4>What’s Included :</h4>
+            <ul>
+                <li>2-night stay in a family room with the best view.</li>
+                <li>Buffet breakfast for 4 (2 adults, 2 children).</li>
+                <li>Free access to the swimming pool and kids’ play area.</li>
+                <li>20% discount on spa services or hotel dining.</li>
+                <li>Kids’ activities like mini cooking classes or creative arts (on scheduled days).</li>
+            </ul>
+            <h4>Terms and Conditions :</h4>
+            <ul>
+                <li>Applicable for families with children aged 12 or below.</li>
+                <li>Full payment required at booking (non-refundable).</li>
+                <li>Booking must be made at least 7 days prior to check-in.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="popup4" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup4')"><img src="gambar/exit.png"></span>
+            <br>
+            <h3>IDR 1.500.000,- net</h3>
+            <h4>What’s Included :</h4>
+            <ul>
+                <li>1-night stay in an deluxe room.</li>
+                <li>A la carte breakfast in the restaurant or via room service.</li>
+                <li>Access to a meeting room for 8 hours and premium Wi-Fi.</li>
+                <li>One-time airport transfer service.</li>
+                <li>10% discount on laundry services and additional facilities.</li>
+            </ul>
+            <h4>Terms and Conditions :</h4>
+            <ul>
+                <li>Valid for single occupancy per package.</li>
+                <li>Must be booked at least 48 hours in advance.</li>
+                <li>Offer is available on weekdays (Monday–Friday).</li>
+            </ul>
+        </div>
+    </div>
+    <div id="popup5" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup5')"><img src="gambar/exit.png"></span>
+            <br>
+            <h3>IDR 1.100.000,- net</h3>
+            <h4>What’s Included :</h4>
+            <ul>
+                <li>Up to 25% discount on deluxe rooms or suites.</li>
+                <li>Complimentary welcome drink and celebratory cake upon arrival.</li>
+                <li>Special commemorative gift from the hotel.</li>
+                <li>Access to an exclusive anniversary gala dinner.</li>
+                <li>Early check-in and late check-out (subject to availability).</li>
+            </ul>
+            <h4>Terms and Conditions :</h4>
+            <ul>
+                <li>Valid only during the hotel’s anniversary celebration period.</li>
+                <li>Discounts and benefits apply to bookings made directly through the hotel website or official channels.</li>
+                <li>Limited slots available; early booking is recommended.</li>
+                <li>Cannot be combined with other offers or promotions.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="popupOverlay" class="popup-overlay" onclick="closeAllPopups()"></div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>Jl. gaktauapa, kota yaudah selatan, Jawa tenggara, bumi 54321 <br>Telepon 0111-97979797 <br>WA (+999) 987 3456 210 <br><br>heheheh@mail.xyz</p>
+            </div>
+            <div class="footer-section">
+                <h3>Location Map</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.226930441767!2d110.8484629151961!3d-7.558258776739235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a14f4d5b5cb8b%3A0xf7c4e678495e445!2sUniversitas%20Sebelas%20Maret!5e0!3m2!1sen!2sid!4v1698070620517!5m2!1sen!2sid" 
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="social-media">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2024 Arina Al Haq</p>
+        </div>
+    </footer>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <script>
+        function showPopup(popupId) {
+            document.getElementById(popupId).classList.remove('hide');
+            document.getElementById(popupId).classList.add("show");
+            document.getElementById("popupOverlay").classList.add("show");
+            document.getElementById("popupOverlay").style.display = "block";
+            document.getElementById(popupId).style.display = "block";
+        }
+    
+        function closePopup(popupId) {
+            document.getElementById(popupId).classList.remove("show");
+            document.getElementById(popupId).classList.add('hide');
+            document.getElementById("popupOverlay").classList.remove("show");
+    
+            setTimeout(() => {
+                document.getElementById(popupId).classList.remove('hide');
+                document.getElementById(popupId).style.display = "none";
+                document.getElementById("popupOverlay").style.display = "none";
+            }, 300); 
+        }
+    
+        function closeAllPopups() {
+            const popups = document.querySelectorAll(".popup");
+            popups.forEach(popup => {
+                popup.classList.remove("show");
+                setTimeout(() => popup.style.display = "none", 400);
+            });
+            document.getElementById("popupOverlay").classList.remove("show");
+            setTimeout(() => document.getElementById("popupOverlay").style.display = "none", 400);
+        }
+        document.getElementById('resetButton').addEventListener('click', function () {
+            const form = document.getElementById('myForm');
+
+        form.reset();
+
+        const dropdowns = form.querySelectorAll('select');
+        dropdowns.forEach(dropdown => {
+            dropdown.selectedIndex = 0; 
+        });
+
+        const datepickers = form.querySelectorAll('input[type="date"]');
+        datepickers.forEach(datepicker => {
+            datepicker.value = '';
+        });
+        window.location.reload()
+        });
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove",function(e){
+            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        });
+    </script>    
+</body>
+</html>

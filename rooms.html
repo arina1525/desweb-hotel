@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rina Hotel-Rooms</title>
+    <link rel="icon" href="gambar/logo.png" sizes="40x40">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style-rooms.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        window.onscroll = function() {
+            let backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-logo">
+            <img src="gambar/logo.png" alt="Logo" class="logo">
+            <p>Loading...</p>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark sticky">
+            <a class="navbar-brand" href="index.html">
+                <img src="gambar/logo.png" alt="Logo" class="logo-icon">
+                The Rina Hotel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hot-offers.html">Hot Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <button id="backToTop" class="float-btn" onclick="scrollToTop()"><img src="gambar/arrow up.png"></button>
+    <h1>ROOM TYPE</h1>
+    <div class="container">
+        <section class="section room-type">
+            <button class="room-btn active" data-room="superior">Superior Room</button>
+            <button class="room-btn" data-room="deluxe">Deluxe Room</button>
+            <button class="room-btn" data-room="family">Family Room</button>
+        </section>
+        <section class="section room-info active" id="superior">
+            <h3>Superior Room</h3>
+            <img class="room-img" src="gambar/room-superior.jpg">
+            <h4>IDR 800,000,- net</h4>
+            <p>Enjoy comfort and convenience in our spacious Superior rooms, measuring 29 square meters and featuring a choice of double or twin beds. Each room is equipped with a wardrobe, full bathroom facilities, a hairdryer and a large standing or practical shower. Suitable for business travelers or families, all 176 rooms can accommodate one extra bed. Book our Superior rooms now for the ultimate in comfort and convenience.</p>
+            <div class="facilities">
+            <div class="facility-icon">
+                <img src="gambar/twin-bed.png" alt="Twin Bed">
+                <span>Twin Bed</span>
+            </div>
+            <div class="facility-icon">
+                <img src="gambar/wardrobe.png" alt="wardrobe">
+                <span>Wardrobe</span>
+            </div>
+            <div class="facility-icon">
+                <img src="gambar/tv.png" alt="tv">
+                <span>TV</span>
+            </div>
+            <div class="facility-icon">
+                <img src="gambar/shower.png" alt="shower">
+                <span>Shower</span>
+            </div>
+            <div class="facility-icon">
+                <img src="gambar/hairdryer.png" alt="hairdryer">
+                <span>Hairdryer</span>
+            </div>
+        </div>
+        </section>
+        <section class="section room-info" id="deluxe">
+            <h3>Deluxe Room</h3>
+            <img class="room-img" src="gambar/room-deluxe.jpg">
+            <h4>IDR 1,200,000,- net</h4>
+            <p>The 37 square meter deluxe room is equipped with all the same facilities as the Superior room. Each room overlooks the mountain or city view, can be selected with a king size or twin bed arrangement, plus a relaxing sofa for an extra sense of luxury. Enjoy our high-speed wifi service and 2 bottles of mineral water provided per day. There are 32 rooms available that are suitable for you business travelers or families, can fit 1 extra bed in a larger area.</p>
+            <div class="facilities">
+            <div class="facility-icon">
+                <img src="gambar/king-bed.png" alt="king bed">
+                <span>King Bed</span>
+            </div>
+            <div class="facility-icon">
+                <img src="gambar/sofa.png" alt="Sofa">
+                <span>Sofa</span>
+            </div>
+            <div class="facility-icon">
+                <img src="gambar/tv.png" alt="TV">
+                <span>TV</span>
+            </div>
+            <div class="facility-icon">
+                <img src="gambar/minibar.png" alt="minibar">
+                <span>Minibar</span>
+            </div>
+            <div class="facility-icon">
+                <img src="gambar/city-view.png" alt="city view">
+                <span>City View</span>
+            </div>
+        </div>
+        </section>
+        <section class="section room-info" id="family">
+            <h3>Family Room</h3>
+            <img class="room-img" src="gambar/room-family.jpg">
+            <h4>IDR 1,700,000,- net</h4>
+            <p>The perfect room for a family vacation, it has a spacious room at 42 square meters. This room has a king size bed type and all deluxe facilities and amenities. An extra bed is provided for a third guest in the room with an additional charge on the booking. The room is also provided with wireless service and 2 bottles of mineral water given per day.</p>
+            <div class="facilities">
+                <div class="facility-icon">
+                    <img src="gambar/king-bed.png" alt="King Bed">
+                    <span>King Bed</span>
+                </div>
+                <div class="facility-icon">
+                    <img src="gambar/extra-bed.png" alt="extra-bed">
+                    <span>Extra Bed</span>
+                </div>
+                <div class="facility-icon">
+                    <img src="gambar/kitchen.png" alt="mini kitchen">
+                    <span>Mini Kitchen</span>
+                </div>
+                <div class="facility-icon">
+                    <img src="gambar/wireless-service.png" alt="wireless-service">
+                    <span>24/7 Wireless Service</span>
+                </div>
+                <div class="facility-icon">
+                    <img src="gambar/city-view.png" alt="city view">
+                    <span>City View</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>Jl. gaktauapa, kota yaudah selatan, Jawa tenggara, bumi 54321 <br>Telepon 0111-97979797 <br>WA (+999) 987 3456 210 <br><br>heheheh@mail.xyz</p>
+            </div>
+            <div class="footer-section">
+                <h3>Location Map</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.226930441767!2d110.8484629151961!3d-7.558258776739235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a14f4d5b5cb8b%3A0xf7c4e678495e445!2sUniversitas%20Sebelas%20Maret!5e0!3m2!1sen!2sid!4v1698070620517!5m2!1sen!2sid" 
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="social-media">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2024 Arina Al Haq</p>
+        </div>
+    </footer>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <script>
+        const buttons = document.querySelectorAll('.room-btn');
+        const roomInfos = document.querySelectorAll('.room-info');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+ 
+                buttons.forEach(btn => btn.classList.remove('active'));
+                roomInfos.forEach(info => info.classList.remove('active'));
+
+                button.classList.add('active');
+
+                const roomId = button.getAttribute('data-room');
+                const roomInfo = document.getElementById(roomId);
+                roomInfo.classList.add('active');
+            });
+        });
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove",function(e){
+            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        });
+    </script>
+</body>
+</html>

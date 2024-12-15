@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rina Hotel-Facilities</title>
+    <link rel="icon" href="gambar/logo.png" sizes="40x40">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style-facilities.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        window.onscroll = function() {
+            let backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const facilities = document.querySelectorAll('.facility');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }   , {
+                threshold: 0.2,
+            });
+            facilities.forEach((facility) => {
+                observer.observe(facility);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-logo">
+            <img src="gambar/logo.png" alt="Logo" class="logo">
+            <p>Loading...</p>
+        </div>
+    </div>
+    <button id="backToTop" class="float-btn" onclick="scrollToTop()"><img src="gambar/arrow up.png"></button>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark sticky">
+            <a class="navbar-brand" href="index.html">
+                <img src="gambar/logo.png" alt="Logo" class="logo-icon">
+                The Rina Hotel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hot-offers.html">Hot Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="facilities">
+        <h1 class="section-title">FACILITIES</h1>
+
+        <div class="facility">
+            <div class="image-frame">
+                <img src="gambar/facility-pool.jpg" alt="swimming-pool">
+            </div>
+            <div class="facility-info">
+                <h3>Swimming Pool</h3>
+                <p>The Rina hotel swimming pool offers a tranquil setting with crystal-clear water, lounge chairs, and poolside service. Some pools are temperature-controlled and include kids' areas for family enjoyment.</p>
+            </div>
+        </div>
+
+        <div class="facility reverse">
+            <div class="image-frame">
+                <img src="gambar/facility-gym.jpg" alt="Gym">
+            </div>
+            <div class="facility-info">
+                <h3>Gym</h3>
+                <p>The gym features modern equipment and professional trainers, catering to diverse fitness needs. Guests can enjoy a premium workout experience with spacious interiors and wellness programs.</p>
+            </div>
+        </div>
+
+        <div class="facility">
+            <div class="image-frame">
+                <img src="gambar/facility-spa.jpg" alt="Spa">
+            </div>
+            <div class="facility-info">
+                <h3>Spa</h3>
+                <p>The spa provides luxurious treatments like massages and facials, using premium products for relaxation. Additional amenities such as steam rooms and saunas enhance the rejuvenation experience.</p>
+            </div>
+        </div>
+
+        <div class="facility reverse">
+            <div class="image-frame">
+                <img src="gambar/facility-coffeeshop.jpg" alt="Coffee Shop">
+            </div>
+            <div class="facility-info">
+                <h3>Coffee Shop</h3>
+                <p>The coffee shop offers freshly brewed beverages, pastries, and light meals in a cozy, stylish atmosphere. It’s perfect for casual meetings or unwinding at any time of the day.</p>
+            </div>
+        </div>
+
+        <div class="facility">
+            <div class="image-frame">
+                <img src="gambar/facility-restaurant.jpg" alt="Restaurant">
+            </div>
+            <div class="facility-info">
+                <h3>Restaurant</h3>
+                <p>The restaurant serves international and local cuisines, crafted by expert chefs in an elegant setting. Guests can enjoy themed nights, live music, and top-notch service.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>Jl. gaktauapa, kota yaudah selatan, Jawa tenggara, bumi 54321 <br>Telepon 0111-97979797 <br>WA (+999) 987 3456 210 <br><br>heheheh@mail.xyz</p>
+            </div>
+            <div class="footer-section">
+                <h3>Location Map</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.226930441767!2d110.8484629151961!3d-7.558258776739235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a14f4d5b5cb8b%3A0xf7c4e678495e445!2sUniversitas%20Sebelas%20Maret!5e0!3m2!1sen!2sid!4v1698070620517!5m2!1sen!2sid" 
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="social-media">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2024 Arina Al Haq</p>
+        </div>
+    </footer>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove",function(e){
+            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        });
+    </script>
+</body>
+</html>
